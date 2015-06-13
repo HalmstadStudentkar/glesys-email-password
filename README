@@ -1,0 +1,10 @@
+
+As GleSYS does not provide a way for the end users to change their
+passwords we need some hack to make it happen.
+
+License: AGPL
+
+You need the GleSYS API PHP class available.
+ -> git clone git@github.com:GleSYS/API.git
+
+//brother <brother@bsnet.se>, 2015-06-14
