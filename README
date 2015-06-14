@@ -4,7 +4,21 @@ passwords we need some hack to make it happen.
 
 License: AGPL
 
-You need the GleSYS API PHP class available.
- -> git clone git@github.com:GleSYS/API.git
+ Install and setup
+
+ Dependencies:
+ * The GleSYS API PHP class available.
+   -> git clone git@github.com:GleSYS/API.git
+ * A web server with PHP where the IMAP module is available
+   -> in Debian based systems you need the php5-imap package.
+   -> for RPM based setup you'll find a php-imap package.
+
+ Set your web server to serve the index.php file of this
+ repository. Copy example.config.php to local.config.php and place it
+ one step up in the path from index.php. Adjust the content to match
+ your setup. Do not forget to add the originating IP of the web server
+ to the API access token in the GleSYS administration panel.
+ The API access token only need "editaccount" in email to be allowed
+ to work.
 
 //brother <brother@bsnet.se>, 2015-06-14
