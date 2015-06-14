@@ -94,7 +94,7 @@ function paintform ($msg=false)
     echo "
 <html>
 <head>
-<title>hejsan</title>
+<title>Change email password</title>
 </head>
 <body>";
 
