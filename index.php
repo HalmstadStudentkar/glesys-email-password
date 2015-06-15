@@ -94,18 +94,22 @@ function changepassword ($u,$np)
  */
 function paintform ($msg=false)
 {
+    global $config;
     echo "
 <html>
 <head>
 <title>Change email password</title>
+<link rel=\"stylesheet\" href=\"".$config["css"]."\" type=\"text/css\" media=\"all\" />
 </head>
-<body>";
+<body>
+<div class=\"content\">";
 
         if (isset($msg[0])) {
-            echo "<div class=\"".$msg[0]."\">".$msg[1]."</div>";
+            echo "<div class=\"".$msg[0]."\">".$msg[1]."</div>\n";
         }
 
         echo "
+<div class=\"formarea\">
 <form name=\"loginchange\" method=\"post\">
 username: <input type=\"text\" name=\"username\"/><br/>
 password: <input type=\"password\" name=\"mailpassword\"/><br/>
@@ -114,7 +118,11 @@ new password1: <input type=\"password\" name=\"newpass1\"/><br/>
 new password2: <input type=\"password\" name=\"newpass2\"/><br/>
 <input type=\"submit\" value=\"Change password\" />
 </form>
-&copy ".date("Y")." Halmstad studentk&aringr (KAOS)
+</div>
+<div class=\"footer\">
+&copy ".date("Y")." ".$config["footertext"]."
+</div>
+</div>
 </body>
 </html>
 ";
@@ -127,6 +135,7 @@ new password2: <input type=\"password\" name=\"newpass2\"/><br/>
 if (!file_exists("../local.config.php")) {
     exit("<h1>local config not set. ABORTED.</h1>");
 } else {
+    $config["css"] = "style.css";
     require "../local.config.php";
     require $config["api_path"]."/PHP/api_classes/glesys_email.php";
 }

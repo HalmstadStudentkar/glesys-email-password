@@ -1,0 +1,11 @@
+div.OK {
+    background: green;
+}
+
+div.ERROR {
+    background: red;
+}
+
+div.WARNING {
+    background: yellow;
+}
