@@ -54,8 +54,11 @@ function validatepasswords ($np1,$np2)
 function logincheck ($u,$p)
 {
     try {
-        imap_open("{mail.glesys.se:993/imap/ssl}", "$u", "$p", OP_HALFOPEN, 1);
-        return true;
+        if (imap_open("{mail.glesys.se:993/imap/ssl}", "$u", "$p", OP_HALFOPEN, 1)) {
+            return true;
+        } else {
+            return false;
+        }
     } catch (Exception $e) {
         unset ($_POST);
         return false;
