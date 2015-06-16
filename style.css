@@ -1,11 +1,95 @@
+body {
+    background: #00356B;
+    color: #fff;
+}
+
+div.content {
+    text-align: left;
+}
+
+a {
+    color: #C2C0C0;
+}
+
 div.OK {
     background: green;
+    color: black;
+    padding: 4px;
+    border: 3px solid #00346A;
 }
+
+div.OK p {
+    font-size: 10 em;
+}
+
 
 div.ERROR {
     background: red;
+    color: black;
+    padding: 4px;
+    border: 3px solid #00346A;
 }
+
+div.ERROR p {
+    font-size: 10 em;
+}
+
+
 
 div.WARNING {
     background: yellow;
+    color: black;
+    padding: 4px;
+    border: 3px solid #00346A;
+}
+
+div.WARNING p {
+    font-size: 10 em;
+}
+
+
+div.formarea {
+    font-size: 13px !important;
+}
+
+div.formarea label {
+    color: #FFFFFF;
+    font-size: 13px;
+    font-weight: bold;
+    text-shadow: 0 1px 1px #000000;
+    text-align: right;
+    float: left;
+    width: 10em;
+}
+
+div.formarea input {
+    border: 1px solid #00346A;
+    font-size: 12px;
+    height: 21px;
+    padding: 6px;
+    width: 237px;
+    margin-left: 2em;
+}
+
+div.formarea .button {
+    background: transparent url(/simple-btn.png) no-repeat scroll 100% 50%;
+    border: medium none !important;
+    font-family: Helvetica,Arial,sans-serif;
+    font-size: 14px !important;
+    font-weight: bold;
+    height: 45px !important;
+    left: 196px;
+    margin: 9px 11px 7px -6px;
+    position: relative;
+    text-shadow: 0 1px 1px #EEEEEE;
+    width: 150px !important;
+}
+
+div.footer {
+    color: #C2C0C0;
+    font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 13px;
+    text-align: left;
+    top: 32px;
+    margin-left: 10em;
 }

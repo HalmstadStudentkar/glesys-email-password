@@ -105,18 +105,22 @@ function paintform ($msg=false)
 <div class=\"content\">";
 
         if (isset($msg[0])) {
-            echo "<div class=\"".$msg[0]."\">".$msg[1]."</div>\n";
+            echo "<div class=\"".$msg[0]."\"><p>".$msg[1]."</p></div>\n";
         }
 
         echo "
+<div class=\"brand\">
+&nbsp;
+</div>
 <div class=\"formarea\">
 <form name=\"loginchange\" method=\"post\">
-username: <input type=\"text\" name=\"username\"/><br/>
-password: <input type=\"password\" name=\"mailpassword\"/><br/>
-<hr/>
-new password1: <input type=\"password\" name=\"newpass1\"/><br/>
-new password2: <input type=\"password\" name=\"newpass2\"/><br/>
-<input type=\"submit\" value=\"Change password\" />
+<label class=\"user\" for=\"iuser\">Email</label>
+<input class=\"input\" id=\"iuser\" type=\"text\" name=\"username\"/><br/>
+<label class=\"pass\" for=\"ipass\">Password</label>
+<input class=\"input\" id=\"ipass\" type=\"password\" name=\"mailpassword\"/><br/>
+<label>New password</label> <input type=\"password\" name=\"newpass1\"/><br/>
+<label>Repeat </label> <input type=\"password\" name=\"newpass2\"/><br/>
+<input type=\"submit\" class=\"button\" value=\"Change password\" />
 </form>
 </div>
 <div class=\"footer\">
