@@ -88,7 +88,11 @@ function changepassword ($u,$np)
  * errors and do a login to the mailbox. If all succeeds the password
  * is changed and the user is brought back here.
  *
- * @param string $msg Maybe maybe? errors and so on....
+ * @param mixed $msg The msg parameter can be either boolean False or
+ *                   an array. The array will have a string with the
+ *                   type of message as the first position and the
+ *                   actual message string as the second position.
+ *                   The message types are OK, WARNING and ERROR.
  *
  * @return void
  */
